@@ -1,0 +1,120 @@
+/* ================================
+   RESET.CSS — Base profissional
+   ================================ */
+
+/* Box sizing consistente: */
+
+*, *::before, *::after {
+ box-sizing: border-box;
+}
+
+/* Remove margens padrão do browser: */
+
+* {
+ margin: 0;
+
+}
+
+/* Ajustes globais de tipografia e renderização:*/
+
+html {
+-webkit-text-size-adjust: 100%;  /* impede zoom automático de fonte no iOS */
+ text-size-adjust: 100%;         /* equivalente moderno */
+ scroll-behavior: smooth;        /* rolagem suave para âncoras */
+ margin: 0;
+ padding: 0;
+}
+
+/* Define altura mínima e otimiza renderização de texto */
+
+body {
+ min-height: 100vh;                   /* garante corpo ocupando a altura da viewport */
+ line-height: 1.5;                    /* altura de linha padrão confortável */
+ -webkit-font-smoothing: antialiased; /* suaviza fontes no macOS/iOS */
+ -moz-osx-font-smoothing: grayscale;  /* suaviza fontes no macOS (Firefox) */
+ margin:0;
+ padding: 0;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+.container.no-scroll {
+    overflow: hidden;
+}
+
+
+/* Evita imagens estourando containers */
+
+img, picture,
+video, canvas, svg {
+  display: block;                 /* remove espaçamento inline indesejado */
+  max-width: 100%;                /* mantém dentro do container */
+  height: auto;                   /* preserva proporção */
+}
+
+/* Form controls herdando tipografia: */
+
+input,button,
+textarea,select {
+ font: inherit;                  /* herda família, tamanho e peso da fonte */
+}
+
+/* Melhora affordance (sensação de “clicável”) */
+
+button {
+ cursor: pointer;                /* cursor de mão */
+}
+
+/* Textarea sem resize horizontal: */
+
+textarea {
+ resize: vertical;               /* permite só aumentar/diminuir altura */
+}
+
+/* Links sem estilo “azul sublinhado” por padrão: */
+
+a {
+ color: inherit;                 /* herda cor do texto */
+ text-decoration: none;          /* remove sublinhado padrão */
+ cursor: pointer;
+}
+
+/* Listas sem bullets/padding padrão: */
+ul,ol {
+  list-style: none;               /* remove bullets/números visuais */
+  padding: 0;                     /* remove recuo padrão */
+}
+
+/* Títulos sem tamanho/peso “surpresa”: */
+
+h1,h2,h3,
+h4,h5,h6 {
+font-size: inherit;             /* evita tamanhos padrão do browser */
+font-weight: inherit;           /* evita pesos padrão do browser */
+}
+
+/* 12) Parágrafos e textos longos:
+   evita overflow/estouro em palavras grandes (URLs etc.) */
+
+p,h1,h2,
+h3,h4,h5,h6 {
+ overflow-wrap: break-word;      /* quebra palavras longas se necessário */
+}
+
+/* Acessibilidade: reduz motion quando o usuário pede:
+   respeita preferências do sistema operacional */
+
+@media (prefers-reduced-motion: reduce) {
+ html {
+   scroll-behavior: auto;        /* desativa rolagem suave */
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important; /* praticamente desliga animações */
+    animation-iteration-count: 1 !important;/* evita loops */
+    transition-duration: 0.001ms !important;/* praticamente desliga transições */
+  }
+}

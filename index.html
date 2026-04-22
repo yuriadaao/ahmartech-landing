@@ -1,0 +1,476 @@
+<!DOCTYPE html >
+<html lang="pt-Br">
+<head>
+    <meta charset="uft-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/token.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+<title>Ahmar Tech </title>
+</head>
+<body>
+<!----------------------------------------PROTEÇÃO DE ENTRADA----------------------------------->
+
+    <div id="lock-screen" style="
+  position: fixed;
+  inset: 0;
+  background: #0b0f1a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Arial;
+  z-index: 9999;
+">
+  <h2>Acesso restrito</h2>
+  <input 
+    type="password" 
+    id="password" 
+    placeholder="Digite a senha"
+    style="padding:10px; margin:10px; border-radius:6px; border:none;"
+  />
+  <button onclick="checkPassword()" style="padding:10px 20px; border:none; border-radius:6px; cursor:pointer;">
+    Entrar
+  </button>
+  <p id="error" style="color:red;"></p>
+</div>
+
+<!---------------------------------------FIMZIM---------------------------------------------------------->
+    
+
+    <header class="header">
+        <nav class="nav-global">
+                <div class="menu-global">
+                  <ul>
+                    <li><a href="#home"><img src="assets/icons/icon-home-01.svg" alt="Icone de Homem">Home</a></li>
+                    <li><a href="#sobre"><img src="assets/icons/icon-file-text.svg" alt="Imagem Illustrativa Sobre">Sobre</a></li>
+                    <li><a href="#comofunciona"><img src="assets/icons/icon-book-open.svg" alt="Icone Illustrativo Instruções">Jornada</a></li>
+                    <li><a href="#vantagens"><img src="assets/icons/icon-chart-pie-01.svg" alt="Icons Illustrativo Vantagens">Vantagens</a></li>
+                    <li><a href="#donation"><img src="assets/icons/icon-gift-01.svg" alt="Icone Illustrativo Donation">Contribua</a></li>
+                    <li><a href="#CTA"><img src="assets/icons/icon-download-01.svg" alt="Icone Illustrativo Download">Download</a></li>
+                    <li><button data-modal="open-contato" type="button" aria-label="Abrir página de contato" class="btn-contato modal-open" ><img src="assets/icons/icon-message-ballon.svg" alt="Icone Illustrativo Contato">Contato</button></li>
+                    
+                  </ul>
+               </div>
+                <button type="button" aria-label="Abrir Menu"   class="nav-bar icon-menu-toogle" aria-label="Open  Menu" >
+                  <img  src="assets/icons/icon-menu.svg" alt="Abrir   Menu">
+                 </button>
+                <figure class="logo-home">
+                 <a href="#home"><img src="assets/logos/logo-horizontal.png" alt="Logo Home-horizontal version"></a>
+                </figure>
+                <button data-modal="open-contato" type="button" aria-label="Abrir página de contato"  class="btn-contato nav-bar modal-open" aria-label="Abrir Contato"><img src="assets/icons/icon-message-ballon.svg" alt="Icone Botão contato">
+                </button>
+                <div class="toogle-menu">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#comofunciona">
+                              Jornada</a></li>
+                        <li><a href="#vantagens">
+                            Vantagens</a></li>
+                        <li><a href="#donation">Doação</a></li>
+                        <li><a href="#CTA">Download</a></li>
+                    </ul>
+                </div>
+        </nav>
+    </header>
+    <main class="container">
+        
+    <section id="home" class="default-section hero">
+        
+            <div class="wrapper">
+                <article class="text-hero-description">
+                    <h1>Arraial do Cabo,<br>
+                       Na tela do seu celular!</h1>
+                        <p>Após anos em busca da solução perfeita desenvolvemos “AHMAR TECH”. Um sistema inteligente e colaborativo que prioriza o seu aproveitamento durante as férias.</p>
+                        <h5>Faça o Download do App e Participe dessa Experiência.
+                        </h5>
+                        <nav class="nav-cta-default">
+                         <a class="btn-cta"><img src="assets/icons/icon-play-store.svg " alt="Download Google play"><p> Disponível na <span>Google Play</span>
+                         </p> </a>
+                          <a class="btn-cta"><img src="assets/icons/icon-apple.svg" alt="Download Apple Store"><p>Disponível na <span>Apple Store</span></p> </a>
+                        </nav>
+                </article>
+                <figure class="hero-figure-default"><img src="assets/images/img-hero-section.png" alt="Imagem illustrativa, Tela de Login app.">
+                </figure>
+                    
+                        <figure class="hero-figure-mobile">
+                <nav class="nav-cta-mobile">
+                  <a class="btn-cta"><img src="assets/icons/icon-play-store.svg " alt="Download Google play"><p> Disponível na <span>Google Play</span>
+                 </p> </a>
+                  <a class="btn-cta"><img src="assets/icons/icon-apple.svg" alt="Download Apple Store"><p>Disponível na <span>Apple Store</span></p> </a>
+                           </nav>
+                <img class="hidden-tablet-image" src="assets/images/img-hero-section.png" alt="Tela Login Aplicativo ">
+                        </figure>
+            </div>
+      </section>
+      <section id="sobre" class="default-section about">
+        
+            <figure class="img-about"><img src="assets/images/img-sobre-enterprise.svg" alt="Imagem illustrativa Sobre Empresa"></figure>
+            <article class="text-about-enterprise">
+                <h3>Somos o equilíbrio azul e rosa !</h3>
+                <p>Após 8 anos atuando no turismo de Arraial do Cabo, entendemos que faltava algo essencial: organização, conexão e cuidado.
+                Foi assim que nasceu  “AHMAR TECH”.</p>
+                <p>Uma solução inteligente que aproxima viajantes e profissionais locais, valorizando o turismo responsável e fortalecendo quem realmente move a cidade.</p>
+                <p>Mais do que um guia, criamos um sistema que organiza informações, otimiza seu tempo e incentiva a preservação desse patrimônio natural único.<br>
+                Nosso compromisso sempre foi responsabilidade, agora nosso foco é cuidar da cidade, dos profissionais e da sua experiência.</p>
+            </article>
+        
+        
+            <figure class="img-about"><img src="assets/images/img-sobre-sustentável.svg" alt="Imagem Illustrativa Sobre Sustentabilidade"></figure>
+            <article class="text-about-sustainable"><h3>Nossa Solução </h3>
+                <p>Pensamos em uma forma de conectar a cidade e os viajantes em uma solução coletiva, capaz de organizar, planejar e potencializar cada experiência durante as férias.
+                Criamos um sistema que valoriza os profissionais comprometidos com o turismo local, ampliando sua visibilidade e fortalecendo o ecossistema da região.
+                Uma plataforma que reúne informações estratégicas, organizadas e confiáveis para transformar seu tempo de férias em uma experiência mais eficiente, segura e memorável.</p>
+            </article>
+        
+      </section>
+      <section id="comofunciona" class="default-section instructions">
+        
+        
+            <figure class="img-instructions"><img src="assets/images/img-whale-pink.png" alt="Baleia Rosa Referência da Logo"></figure>
+            <button class="modal-open" data-modal="step-01" aria-label="Abrir Passo a Passo">
+                <article class="card-instructions"><h3>Download & Inscrição</h3>
+                <p>Sistema de download e inscrição simplificado através da loja de seu dispositivo móvel.</p>
+                <h5>Clique Aqui e Saiba Mais!</h5>
+                </article>
+            </button>
+            <button class="modal-open" data-modal="step-02" aria-label="Abrir Passo a passo">
+                <article class="card-instructions">
+                    <h3>Verificação & Identificação</h3>
+                    <p>Após sua inscrição verifique sua caixa de entrada para verificar seu cadastro e configurar seu perfil.</p>
+                    <h5>Clique Aqui e Saiba Mais!</h5>
+                </article>
+            </button>
+            <button class="modal-open" data-modal="step-03" type="button" aria-label="Abrir Passo a passo">
+                <article class="card-instructions">
+                <h3>Sistema Intuitivo</h3>
+                <p>O “app” organiza diversas dicas, comentários e avalições de forma simples para melhorar sua experiência.</p>
+                <h5> Clique Aqui e Saiba Mais!</h5>
+                </article>
+            </button>
+           
+            <figure class="card-image-hidden">
+                <img src="assets/images/img-instructions-section.png " alt="Imagem Illustrativa Passo a Passo">
+            </figure>
+            
+            <button class="modal-open" data-modal="step-04" type="button" aria-label="Abrir Passo a passo">
+                <article class="card-instructions"> <h3>Dicas & Parceiros</h3>
+                <p>Nosso app organiza várias dicas de primeira mão e recomenda diversos serviços em destaque no mercado</p>
+                <h5>Clique Aqui e Saiba Mais!</h5>
+                </article>
+            </button>
+            <button class="modal-open" data-modal="step-05" type="button" aria-label="Abrir Passo a passo">
+              <article class="card-instructions">  <h3>Contribuição & Benefícios</h3>
+                <p>Ao contribuir, você ganha privilégios que impactam diretamente na experiência de nosso app.  </p>
+                <h5>Clique Aqui e Saiba Mais!</h5>
+              </article>
+            </button>
+            <button class="modal-open" data-modal="step-06" type="button" aria-label="Abrir Passo a passo">
+                <article class="card-instructions">
+                <h3>Redes Socias & Atualizações</h3>
+                <p>Se mantenha atualizado através de nossas redes sociais com notícias e postagens em primeira mão.</p>
+                <h5>Clique Aqui e Saiba Mais!</h5>
+                </article>
+            </button>
+
+            <figure class="img-instructions"><img src="assets/images/img-whale-blue.png" alt="Baleia Rosa Referência da Logo"></figure>
+        
+        
+      </section>
+      <section id="vantagens" class="default-section advantages">
+            <article class="text-advantages"> 
+                <h3>Vantagens</h3>
+                    <p>A base de informações do
+                    <span>“AHMAR TECH”</span> nasce da experiência real: são mais de 12 anos de atuação no turismo de Arraial do Cabo, com acompanhamento contínuo das transformações no atendimento, nas exigências legais e nas diretrizes operacionais da região.</p>
+                    <p> equipe de consultoria local reúne conhecimento técnico e vivência prática, garantindo que cada recomendação no app seja confiável, atualizada e alinhada às normas de funcionamento.
+                    O resultado é uma curadoria responsável, que une organização, entretenimento e consciência ambiental valorizando o destino e proporcionando uma experiência segura e memorável.</p>
+                </article>
+                <figure class="img-advantages" ><img src="assets/images/img-vatagens.png"
+                    alt="Illustrativo de Vantagens e Doações">
+                </figure>
+
+              <div class="wrapper">
+                 <article class="text-advantages">
+                    <h3>Vantagens</h3>
+                    <p>A base de informações do
+                    <span>“AHMAR TECH”</span> nasce da experiência real: são mais de 12 anos de atuação no turismo de Arraial do Cabo, com acompanhamento contínuo das transformações no atendimento, nas exigências legais e nas diretrizes operacionais da região.</p>
+                    <p> equipe de consultoria local reúne conhecimento técnico e vivência prática, garantindo que cada recomendação no app seja confiável, atualizada e alinhada às normas de funcionamento.
+                    O resultado é uma curadoria responsável, que une organização, entretenimento e consciência ambiental valorizando o destino e proporcionando uma experiência segura e memorável.</p>
+                 </article>
+                 <figure class="img-advantages" ><img  src="assets/images/img-vatagens.png"
+                    alt="Illustrativo de Vantagens e Doações">
+                 </figure>
+              </div>
+        
+            <article id="donation" class="text-donation"><h3>Contribua com Doações</h3>
+                <p>O acesso ao nosso         sistema     é totalmente   gratuito, porque acreditamos que informação de qualidade deve ser acessível a todos.
+                 Ao realizar uma doação, você fortalece nossa equipe de consultoria, contribui para a evolução contínua do app e passa a fazer parte ativa deste projeto.
+                Mais do que apoiar, você se torna parte da construção de um turismo mais organizado, responsável e consciente em Arraial do Cabo — com acesso a conteúdos e áreas exclusivas para contribuintes.
+                 Sua contribuição não é apenas uma doação,é participação.</p>
+            </article>
+        
+      </section>
+      <section id="CTA" class="default-section download ">
+          <div class="wrapper">
+              <figure class="mockup-cta"><img src="assets/images/img-mockup.png" alt="Imagem Illustrativa de Logo No APP"></figure>
+              
+              <figure class="logo-vertical-cta"><img src="assets/logos/logo-Vertical.png" alt="Logo Ahmar Tech"></figure>
+              
+              
+              <div class="text-cta-default">
+                 <h3 class="title-cta-default">Equilíbrio entre Tecnologia & Experiência.</h3>
+                 <h1>BAIXE O APP!</h1>
+                 <nav class="nav-cta-default">
+                   <a class="btn-cta-mobile"><img src="assets/icons/icon-play-store.svg " alt="Download Google play"><p> Disponível na <span>Google Play</span>
+                   </p> </a>
+                   <a class="btn-cta-mobile"><img src="assets/icons/icon-apple.svg" alt="Download Apple Store"><p>Disponível na <span>Apple Store</span></p> </a>
+                  </nav>
+                 <nav class="nav-cta-mobile">
+                   <a class="btn-cta-mobile"><img src="assets/icons/icon-play-store.svg " alt="Download Google play"><p> Disponível na <span>Google Play</span>
+                   </p> </a>
+                   <a class="btn-cta-mobile"><img src="assets/icons/icon-apple.svg" alt="Download Apple Store"><p>Disponível na <span>Apple Store</span></p> </a>
+                  </nav>
+               </div>
+           </div>
+
+      </section>
+     
+ </main>
+  <footer class="footer-institutional">
+    <div>
+        <h4>AHMAR TECH</h4>
+        <p>Tecnologia aplicada ao turismo inteligente.<br>
+            Organize, Explore & Viva melhor.</p>
+    </div>
+        <ul>
+            <li>Home</li>
+            <li>Como Funciona</li>
+            <li>Vantagens</li>
+            <li>Download</li>
+            <li>Contato</li>
+        </ul>
+        <ul>
+            <li>Termos de Uso</li>
+            <li>Politica de Privacidade</li>
+            <li>Cookies</li>
+            <li>LGPD</li>
+        </ul>
+        <div class="social-midia">
+        <h5>Redes Socias:</h5>
+        <figure class="icon-footer" >
+            <img src="assets/icons/icon-pink-facebook.svg" 
+            alt="Icone Facebook direcionamento">
+            <img src="assets/icons/icon-pink-instagram.svg" 
+            alt="Icone Instagram direcionamento">
+            <img src="assets/icons/icon-pink-whatsapp.svg" 
+            alt="Icone Youtube direcionamento">
+            <img src="assets/icons/icon-pink-chrome.svg" 
+            alt="Icone Youtube direcionamento">
+            
+        </figure>
+        </div>
+    </footer>
+  <footer><p>© 2025 AHMAR TECH Todos os direitos reservados. Desenvolvido com foco em experiência e inovação.</p></footer>
+    
+  <!------ AQUI INICIA A MODAL DE CONTATO ----->
+  
+  <div id="open-contato" class="blue modal-overlay">
+      <section class="modal-contato">
+       
+            <div>
+                  <button class="btn-modal-instructions close-modal" type="button" aria-label="Fechar Modal"></button>
+                <h1>Contato</h1>
+                <form>
+                    <label for="nome">Nome Completo:</label><br>
+                    <input type="text" id="nome" name="nome"><br>
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" name="email"><br>
+                    <label for="mensagem">Digite sua mensagem</label><br>
+                    <textarea name="mensagem" rows="10" cols="40">
+                        Sua mensagem aqui..
+                    </textarea><br>
+                    <button name="Enviar" type="submit">
+                        Enviar</button>
+                    <button name="Limpar" type="reset">
+                        Limpar
+                    </button>
+                </form>
+            </div>
+
+                <div class="footer-contato">
+                    <figure class="logo-contato">
+                    <img src="assets/logos/logo-horizontal.png" alt="Logo Home Versão Horizontal">
+                    </figure>
+                    <figure class="social-midia">
+                        <a><img src="assets/icons/icon-blue-facebook.svg"
+                        alt="Icone Facebook direcionamento"></a>
+                        <a><img src="assets/icons/icon-blue-instagram.svg"
+                        alt="Icone Instagram direcionamento"></a>
+                        <a><img src="assets/icons/icon-blue-whatsapp.svg"
+                        alt="Icone Youtube direcionamento"></a>
+                        <a><img src="assets/icons/icon-blue-chrome.svg"
+                        alt="Icone Youtube direcionamento"></a>
+                    </figure>
+                </div>
+        </section>
+  </div>
+
+  <!-- Modal instructions / CARD I -->
+
+   <div id="step-01" class="pink modal-overlay">
+        <div class="modal-instructions card-I">
+        <button class="btn-modal-instructions close-modal" type="button" aria-label="Fechar Modal"></button>
+        <div class="title-instructions-modal"><h2>Download & Inscrição</h2></div>
+            <div class="modal-wrapper-instructions">
+            
+            <article class="modal-instructions-text">
+                <div class="title-instructions-modal"><h2>Download & Inscrição</h2></div>
+                <p>O app está disponível para iOS e Android. Basta acessar a loja do seu dispositivo, fazer o download e tocar em “Inscrever-se” para começar.</p>
+                <p>Você  pode se inscrever com sua conta do Gmail/Facebook. Basta selecionar sua preferência e autorizar o acesso para preencher seus dados automaticamente.</p>
+            </article>
+            <figure class="modal-instructions-img">
+                <img src="assets/images/img-instructions-01.png" alt="Passo a Passo imagem 01">
+            </figure>
+          
+            <button class="btn-modal-instructions next-modal-instructions" type="button" aria-label="Próxima Instrução"></button>
+            </div>
+
+        </div>
+
+   </div>
+    <!-- Modal instructions / CARD II -->
+
+   <div id="step-02" class="pink modal-overlay">
+        <div class="modal-instructions card-I">
+        <button class="btn-modal-instructions close-modal" type="button" aria-label="Fechar Modal"></button>
+        <div class="title-instructions-modal"><h2>Verificação & Identificação</h2></div>
+            <div class="modal-wrapper-instructions">
+            
+            <article class="modal-instructions-text">
+                <div class="title-instructions-modal"><h2>Verificação & Identificação</h2></div>
+                <p>Após concluir esta etapa, você receberá um link de confirmação para continuar seu cadastro.</p>
+                <p>No primeiro acesso, você irá configurar seu perfil com informações básicas, como nome de usuário, senha e foto.</p>
+            </article>
+            <figure class="modal-instructions-img">
+                <img src="assets/images/img-instructions-02.png" alt="Passo a Passo imagem 02">
+            </figure>
+            <button class="btn-modal-instructions previous-modal-instructions" back-modal- type="button" aria-label="Voltar instrução"></button>
+            <button class="btn-modal-instructions next-modal-instructions" type="button" aria-label="Próxima Instrução"></button>
+            </div>
+
+        </div>
+
+   </div>
+    <!-- Modal instructions / CARD III -->
+
+   <div id="step-03" class="pink modal-overlay">
+        <div class="modal-instructions card-I">
+        <button class="btn-modal-instructions close-modal" type="button" aria-label="Fechar Modal"></button>
+        <div class="title-instructions-modal"><h2>Sitema Intuitivo</h2></div>
+            <div class="modal-wrapper-instructions">
+            
+            <article class="modal-instructions-text">
+                <div class="title-instructions-modal"><h2>Sistema Intuitivo</h2></div>
+                <p>Nosso app possui um layout inspirado nas redes sociais, pensado para ser simples e intuitivo, permitindo que você aproveite todos os recursos com facilidade.</p>
+        
+            </article>
+            <figure class="modal-instructions-img">
+                <img src="assets/images/img-instructions-03.png" alt="Passo a Passo imagem 03">
+            </figure>
+            <button class="btn-modal-instructions previous-modal-instructions" back-modal- type="button" aria-label="Voltar instrução"></button>
+            <button class="btn-modal-instructions next-modal-instructions" type="button" aria-label="Próxima Instrução"></button>
+            </div>
+
+        </div>
+
+   </div>
+    <!-- Modal instructions / CARD IV -->
+
+   <div id="step-04" class="pink modal-overlay">
+        <div class="modal-instructions card-I">
+        <button class="btn-modal-instructions close-modal" type="button" aria-label="Fechar Modal"></button>
+        <div class="title-instructions-modal"><h2>Dicas & Parceiros</h2></div>
+            <div class="modal-wrapper-instructions">
+            
+            <article class="modal-instructions-text">
+                <div class="title-instructions-modal"><h2>Dicas & Parceiros</h2></div>
+                <p>Explore as opções de entretenimento da cidade, desde bares e restaurantes até passeios de barco e quadriciclo.</p>
+                <p>Ao contribuir com o sistema, você desbloqueia avaliações valiosas que ajudam a planejar melhor suas experiências.</p>
+            </article>
+            <figure class="modal-instructions-img">
+                <img src="assets/images/img-instructions-04.png" alt="Passo a Passo imagem 04">
+            </figure>
+            <button class="btn-modal-instructions previous-modal-instructions" back-modal- type="button" aria-label="Voltar instrução"></button>
+            <button class="btn-modal-instructions next-modal-instructions" type="button" aria-label="Próxima Instrução"></button>
+            </div>
+
+        </div>
+
+   </div>
+    <!-- Modal instructions / CARD V -->
+
+   <div id="step-05" class="pink modal-overlay">
+        <div class="modal-instructions card-I">
+        <button class="btn-modal-instructions close-modal" type="button" aria-label="Fechar Modal"></button>
+        <div class="title-instructions-modal"><h2>Contribuição & Benefícios</h2></div>
+            <div class="modal-wrapper-instructions">
+            
+            <article class="modal-instructions-text">
+                <div class="title-instructions-modal"><h2>Contribuição & Benefícios</h2></div>
+                <p>Ao contribuir com o sistema, você se torna um especialista em Arraial do Cabo e ainda ajuda a melhorar a qualidade das informações para toda a comunidade.</p>
+                <p>Este é um projeto sem fins lucrativos, criado para melhorar sua experiência e incentivar o cuidado com o ambiente local, reduzindo impactos desnecessários.</p>
+            </article>
+            <figure class="modal-instructions-img">
+                <img src="assets/images/img-instructions-05.png" alt="Passo a Passo imagem 05">
+            </figure>
+            <button class="btn-modal-instructions previous-modal-instructions" back-modal- type="button" aria-label="Voltar instrução"></button>
+            <button class="btn-modal-instructions next-modal-instructions" type="button" aria-label="Próxima Instrução"></button>
+            </div>
+
+        </div>
+
+   </div>
+    <!-- Modal instructions / CARD VI -->
+
+   <div id="step-06" class="pink modal-overlay">
+        <div class="modal-instructions card-I">
+        <button class="btn-modal-instructions close-modal" type="button" aria-label="Fechar Modal"></button>
+        <div class="title-instructions-modal"><h2>Atualizações & Redes Socias</h2></div>
+            <div class="modal-wrapper-instructions">
+            
+            <article class="modal-instructions-text">
+                <div class="title-instructions-modal"><h2>Atualizações & Redes Socias</h2></div>
+                <p>Siga nossas redes sociais para ficar por dentro de eventos, clima, novidades e muito mais. Conte com atualizações diárias, com fotos e vídeos de lugares e momentos incríveis.</p>
+                
+            </article>
+            <figure class="modal-instructions-img">
+                <img src="assets/images/img-instruction-06.png" alt="Passo a Passo imagem 06">
+            </figure>
+            <button class="btn-modal-instructions previous-modal-instructions" back-modal- type="button" aria-label="Voltar instrução"></button>
+            <button class="btn-modal-instructions next-modal-instructions" type="button" aria-label="Próxima Instrução"></button>
+            </div>
+
+        </div>
+
+   </div>
+
+<!--------------------------------------ECMA PROTECTION--------------------------------------------->
+   <script>
+  function checkPassword() {
+    const input = document.getElementById("password").value;
+
+    if (input === "ahmar123") {
+      document.getElementById("lock-screen").style.display = "none";
+    } else {
+      document.getElementById("error").innerText = "Senha incorreta";
+    }
+  }
+</script>
+
+</body>
+</html>

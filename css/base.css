@@ -1,0 +1,186 @@
+html {
+    font-size: 14px;
+}
+body {
+font-family:var(--font-text);
+}
+
+h1,h2,h3,h4,h5,h6 {
+font-family:var(--font-heading);
+}
+
+h1 {
+font-size: var(--font-size-2xl);
+font-weight: 800;
+
+}
+h2{
+    font-size: var(--font-size-xl);
+    font-weight: 800;
+}
+h3 {
+    font-size:var(--font-size-lg);
+    font-weight: 800;
+}
+h5 {
+    font-size:var(--font-size-md);
+    font-weight: 800;
+}
+em, i, span.italic { 
+font-family:var(--font-text);
+font-style:italic;
+font-weight:300;
+}
+
+.text-hero-description {
+    text-align: center;
+    padding:var(--space-md) var(--space-xl);
+}
+.text-hero-description h2,h1 {
+    color:var(--color-light-blue);
+    line-height:1 ;
+}
+.text-hero-description > p{
+    display:none;
+}
+.text-hero-description h5 {
+    color: var(--color-dark-pink);
+    font-weight: 800; 
+}
+
+
+.text-about-enterprise {
+    text-align: left;
+    padding-inline: var(--space-lg);
+}
+
+.text-about-enterprise h3 {
+    color: var(--color-light-blue);
+    line-height: 1;
+    padding-block: var(--space-xs);
+}
+.text-about-enterprise p { 
+    color: var(--color-light-pink);
+    
+}
+.text-about-sustainable {
+    text-align: left;
+    padding-inline: var(--space-lg);
+}
+.text-about-sustainable h3 {
+    color: var(--color-light-pink);
+    line-height: 1;
+    padding-bottom: var(--space-xxs);
+}
+.text-about-sustainable p {
+    
+    color: var(--color-light-blue);
+    
+}
+.advantages article h3 {
+    color: var(--color-dark-pink);
+    text-align: left;
+    padding-block: var(--space-md);
+    
+}
+.advantages article p {
+    color: var(--color-light-blue);
+    text-align: left;
+    
+}
+.advantages span {
+    color: var(--color-dark-pink);
+    font-style: italic;
+
+}
+footer p {
+    color:var(--color-dark-pink);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-align: center;
+}
+.download h1 {
+    color:var(--color-light-blue);
+}
+.download h3 {
+    color: var(--color-light-pink);
+}
+
+@media (min-width:720px) {
+
+    html{
+        font-size: 16px;
+    }
+
+    .text-hero-description {
+        text-align: left;
+        padding:var(--space-md) var(--space-xl);
+    }
+    .text-hero-description h1 {
+        line-height: 1.5;
+    }
+    .text-hero-description h5 {
+        font-size: var(--space-md);
+    }
+    .text-hero-description > p {
+        display: block;
+        font-size: var(--space-md);
+        color: var(--color-light-pink);
+
+    }
+    .text-about-enterprise h3{
+        font-size: var(--font-size-xl);
+     }
+    .text-cta{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+     }
+}
+@media (min-width:1024px) {
+
+     h1 {
+        font-size: var(--font-size-3xl);
+        font-weight: 800;
+
+     }
+     h2{
+        font-size: var(--font-size-2xl);
+        font-weight: 800;
+     }
+     h3 {
+        font-size:var(--font-size-xl);
+        font-weight: 800;
+     }
+     h4 {
+        font-size:var(--font-size-lg);
+        font-weight: 800;
+     }
+     h5{
+        font-size:var(--font-size-md);
+        font-weight: 800;
+     }
+     
+     .footer-institutional > div h4 {
+        text-align: center;
+        color: var(--color-white);
+
+     }
+     .footer-institutional > div p {
+        text-align: center;
+        font-weight: 300;
+        color: var(--color-white);
+     }
+     .footer-institutional  ul {
+        list-style-type: disc ;
+        color:var(--color-white) ;
+        font-size: var(--font-size-xs);
+     }
+     .social-midia h5 {
+        color: var(--color-white);
+     }
+    }
+    @media (min-width: 1200px) {
+
+    }
+    

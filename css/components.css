@@ -1,0 +1,490 @@
+.nav-global{
+    display:flex;
+    padding-inline: var(--space-lg);
+    gap:var(--space-2xl);;
+    align-items: center;
+    justify-content: center;
+
+}
+.menu-global {
+    display:none;
+}
+.menu-global ul li a img {
+        display: none;
+}
+.menu-global ul li button img {
+        display: none;
+}
+.toogle-menu {
+    background-color: var(--color-white);
+    position: fixed;
+    top: 10vh;
+    left: 10vw;
+
+    z-index: var(--z-dropdown);
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-lg);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-2vh);
+    transition: opacity 0.3s ease, 
+                transform 0.3s ease, 
+                visibility 0.3s ease;
+
+
+}
+.toogle-menu.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.toogle-menu ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+
+
+}
+
+.toogle-menu ul li  {
+    width: 15em;
+    display: flex;
+
+  
+     
+}
+.toogle-menu ul li a {
+    flex: 1;
+    padding-block: var(--space-sm);
+    padding-inline-start: var(--space-lg);
+    border-bottom: 0.5px dotted var(--color-translucent-blue);   
+    font-weight: 600;
+    color: var(--color-light-blue);
+    transition: var(--trasition-base);
+    border-radius: var(--radius-md);
+    
+}
+.toogle-menu ul li a:hover {
+    background-color: var(--color-navy-blue);
+    color: var(--color-white);
+}
+
+.nav-cta-mobile {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap:var(--space-sm);
+    padding-left: var(--space-lg);
+    padding-top: var(--space-lg);
+    margin-block-end: var(--space-lg);
+}
+.nav-cta-mobile a {
+    display: flex;
+    gap: var(--space-sm);
+    min-width: 150px;
+    max-width: 170px;
+    align-items: center;
+    padding: 8px 16px 8px 16px;
+    background-color: var(--color-translucent-gray); 
+    color: var(--color-white);
+    border-radius: var(--space-xxs);
+    border: 1px solid var(--color-dark-gray);
+    font-size: var(--font-size-xxs);
+    box-shadow: var(--shadow-md) var(--shadow-lg);
+    
+}
+
+.nav-cta-mobile span{
+    font-size: var(--font-size-xs);
+}
+.nav-cta-default {
+    display: none;
+}
+.instructions button {
+    border: none;
+    background: none;
+}
+
+.card-instructions {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    border-radius: var(--radius-sm);
+    gap: var(--space-xs);
+    padding: var(--space-lg);
+    margin: var(--space-sm);
+    box-shadow:var(--shadow-md);
+    background-color: var(--color-white);
+    max-width: 450px;
+    transition:var(--trasition-slow);
+
+}
+.card-instructions h3 {
+    color: var(--color-dark-gray);
+}
+.card-instructions p {
+    color: var(--color-dark-pink);
+    font-size: var(--font-size-sm);
+}
+.card-instructions h5 {
+    background-color: transparent;
+    border: none;
+    color: var(--color-light-pink);
+}
+.card-instructions:hover {
+    box-shadow:
+         0 0 10px rgba(231, 89, 165, 0.4),
+         0 0 25px rgba(231, 89, 165, 0.3),
+         0 0 50px rgba(231, 89, 165, 0.2); 
+         
+    
+}
+.modal-overlay {
+    position: fixed;
+    display: flex;
+    z-index: var(--z-modal);
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+   
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(100vw);
+    transition: opacity 0.5s ease, 
+                transform 0.3s ease, 
+                visibility 0.5s ease;
+
+        }
+.blue {
+     background-color: var(--color-translucent-blue);
+} 
+.modal-overlay.active {
+    
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+.modal-contato {
+     display: flex;
+     flex-direction: column;
+     background-color: var(--color-white);
+     gap: var(--space-2xl);
+     border-radius: var(--radius-lg);
+     border: 4px double var(--color-light-pink);
+     padding: var(--space-xl) var(--space-xl);
+    }
+.modal-contato h1 {
+     padding-block: var(--space-xl);
+     color: var(--color-light-pink);
+    }
+.modal-contato form {
+    color: var(--color-navy-blue);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-align: left;
+    
+    }
+.modal-contato input, textarea {
+    border: 1px solid var(--color-navy-blue);
+    border-radius: var(--radius-md);
+    line-height: var(--space-lg);
+    margin-block-end: var(--space-xs);
+    color: var(--color-navy-blue);
+    box-shadow: inset var(--shadow-sm);
+    }
+.modal-contato form button {
+    background-color: var(--color-dark-pink);
+    color: var(--color-white);
+    border: 1px solid var(--color-light-pink);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xs) var(--space-xl);
+
+}
+.logo-contato {
+   display: none;
+}
+.social-midia {
+    display:flex;
+    justify-content: center;
+    padding-block-start: var(--space-md);
+    gap:var(--space-xl);
+    
+
+}
+
+/*** Modal Instruction / card - 01 ***/
+.pink {
+    padding: var(--space-2xl --space-xl);
+    background-color: var(--color-translucent-pink);
+    height: 100vh;
+    width: 100vw;
+
+   
+    transform: translateY(+100vh);
+
+     transition:transform 0.3s ease, 
+                
+
+}
+
+.modal-instructions {
+    position: relative;
+    border-radius: var(--radius-lg);
+    background-image: url(../assets/backgrounds/bg-modal.png);
+    background-position: center;
+    background-size: cover;
+    margin-inline: var(--space-md);
+    border: 2px outset var(--color-light-pink);
+}
+.btn-modal-instructions {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    padding: var(--space-xs);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-full);
+}
+.close-modal {
+   background-image: url(../assets/icons/icon-circle-close-pink.svg);
+   right: 10px;
+   top: 10px;
+}
+.previous-modal-instructions {
+    background-image: url(../assets/icons/icon-arrow-left-circle-pink.svg);
+    left: 10px;
+    bottom: 10px;
+}
+.next-modal-instructions {
+    background-image: url(../assets/icons/icon-arrow-right-circle-pink.svg);
+    right: 10px;
+    bottom: 10px;
+}
+.modal-wrapper-instructions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2xl);
+    justify-content: center;
+    gap: var(--space-xs);
+    padding:var(--space-3xl) var(--space-md);
+
+}
+.modal-instructions-img img{
+    max-height:250px ;
+}
+.modal-instructions-img {
+    padding-block: var(--space-md);
+    align-self: center;
+    order:-1;
+}
+.modal-instructions-text {
+    color: var(--color-light-blue);
+    font-weight: 400;
+    padding: var(--space-xs);
+    font-size: var(--font-size-sm);
+    max-width: 360px;
+    
+
+}
+.modal-wrapper-instructions h2 {
+    text-align: left;
+    color: var(--color-navy-blue);
+    
+}
+.modal-instructions >.title-instructions-modal {
+    display:none;
+   
+
+}
+
+
+
+@media (min-width:720px) {
+
+    .nav-cta-default {
+        display:flex;
+    }
+    .nav-cta-default {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap:var(--space-sm);
+    padding-top: var(--space-lg);
+    }
+    .nav-cta-default a {
+        display: flex;
+        gap: var(--space-sm);
+        min-width: 150px;
+        max-width: 170px;
+        align-items: center;
+        padding: 8px 16px 8px 16px;
+        background-color: var(--color-translucent-gray); 
+        color: var(--color-white);
+        border-radius: var(--space-xxs);
+        border: 1px solid var(--color-dark-gray);
+        font-size: var(--font-size-xxs);
+        box-shadow: var(--shadow-md) var(--shadow-lg);
+    
+    }
+    .nav-cta-mobile {
+        display: none;
+    }
+  
+    .card-instructions p {
+    
+    font-size: var(--font-size-sm);
+    }
+
+    .modal-contato {
+        
+        padding: var(--space-xl) var(--space-6xl);
+    }
+    .modal-contato h1 {
+        padding-block: var(--space-md);
+    }
+    .modal-contato form, textarea {
+        
+        font-size: var(--font-size-xs);
+        font-weight: 600;
+        color: var(--color-navy-blue);
+    }
+    .modal-contato input, textarea {
+        border: 1px solid var(--color-navy-blue);
+    }
+    .modal-contato form button {
+        background-color: var(--color-dark-pink);
+        color: var(--color-white);
+        border: 1px solid var(--color-light-pink);
+        margin: 0 auto;
+
+    }
+    .footer-contato {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo-contato {
+        display: inherit;
+        width:180px;      
+    }
+    .social-midia {
+        gap: var(--space-xl);
+        
+    }
+    
+
+
+}
+@media (min-width:1024px) {
+
+   .nav-bar {
+        display: none;
+    }
+    .logo-home {
+        order:-1;
+    }
+    .btn-contato {
+        background-color: transparent;
+        border: none;
+    }
+    .menu-global {
+        display: flex;
+        
+    }
+    .menu-global ul {
+        display: flex;
+        gap: var(--space-lg);
+        text-align: center;
+        align-items: center;
+        font-size: var(--font-size-sm);
+        color: var(--color-light-blue);
+        font-weight: 600;
+    }
+  
+    .menu-global ul li a {
+        transition-duration: 0.5s;
+    }
+    .menu-global ul li a:hover {
+        text-decoration: underline;
+        color: var(--color-dark-pink);
+        
+    }
+    .menu-global ul li button {
+        
+        color: var(--color-dark-pink);
+        font-weight: 600;
+        transition-duration: 0.5s;
+    }
+    .menu-global ul li button:hover {
+        text-decoration: underline;
+        color: var(--color-navy-blue);
+
+    }
+    .toogle-menu {
+        display: none;
+    }
+    .card-instructions {
+        height: 16rem;
+    }
+    .card-instructions p {
+        font-size: var(--font-size-sm);
+    }
+
+}
+@media (min-width:1200px) {
+
+    
+        .menu-global ul li {
+            display: flex;
+            gap: var(--space-lg);
+        }
+       .menu-global ul li a{
+        display:inline-flex;
+        gap: var(--space-xxs);
+        align-items:flex-start;
+        justify-content: center;
+        
+
+        }
+          .menu-global ul li button{
+        display:inline-flex;
+        gap: var(--space-xs);
+        align-items:flex-start;
+        justify-content: center;
+        margin-left: var(--space-xl);
+
+        }
+        .menu-global ul li a img {
+            display: inherit;
+            width: var(--space-md);
+
+        }
+        .menu-global ul li button img {
+            display: inherit;
+            width: var(--space-md);
+
+        }
+        .card-instructions {
+            height: 14em;
+        }
+        .modal-contato {
+            padding-inline: var(--space-5xl);
+            }
+       
+      
+}
